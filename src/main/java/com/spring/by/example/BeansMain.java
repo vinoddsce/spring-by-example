@@ -13,6 +13,7 @@ public class BeansMain {
              ApplicationContext appCon = new ClassPathXmlApplicationContext ("beans.xml");
              Student factory = (Student)appCon.getBean("student");
              factory.displayInfo();
+             ((ClassPathXmlApplicationContext)appCon).close();
              
       }
 }
